@@ -104,7 +104,7 @@
         <!-- Our Latest Projects Section -->
         <section id="projects" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Our Latest <span class="text-yellow-400"> Projects</span></h2>
+                <h2 class="text-3xl font-bold text-center mb-12">Our Latest <span class="text-yellow-400 shadow-glow">Projects</span></h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
@@ -170,22 +170,24 @@
                     
                     <!-- Consultation Form -->
                     <div>
-                        <form class="bg-white p-6 rounded-lg shadow-md">
+                        <form action="https://formspree.io/f/mgvwkdee" method="POST" class="bg-white p-6 rounded-lg shadow-md">
                             <div class="mb-4">
-                                <input type="text" placeholder="Name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <input type="text" name="name" placeholder="Name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black" required>
                             </div>
                             <div class="mb-4">
-                                <input type="tel" placeholder="Phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <input type="tel" name="phone" placeholder="Phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black" required>
                             </div>
                             <div class="mb-4">
-                                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                                    <option value="">Type of work needed</option>
+                                <select name="work_type" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-black" required>
+                                    <option value="" class="text-gray-500">Type of work needed</option>
                                     <option value="repair">House Repair</option>
                                     <option value="construction">Construction</option>
                                     <option value="design">Design</option>
                                 </select>
                             </div>
-                            <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-2 px-4 rounded-md hover:bg-yellow-600 transition duration-300">SUBMIT</button>
+                            <button type="submit" class="relative w-[150px] bg-[#e74c3c] text-white py-4 px-4 font-bold uppercase transition-all duration-200 rounded-md opacity-80 tracking-wider shadow-[0_7px_2px_#c0392b,0_8px_5px_#000] hover:opacity-100 active:top-1 active:shadow-[0_3px_2px_#c0392b,0_3px_5px_#000]">
+                                Submit
+                              </button>
                         </form>
                     </div>
                 </div>
