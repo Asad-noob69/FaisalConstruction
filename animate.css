@@ -1,0 +1,100 @@
+/* Existing styles */
+.animate-slide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-slide.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-right {
+    animation: slideRight 1s ease-out forwards;
+}
+
+/* New styles for logo animations */
+@keyframes slideInLogo {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#pages img.animate-slide {
+    opacity: 0;
+    animation: slideInLogo 0.5s ease-out forwards;
+    transition: none; /* Override the transition for logo animations */
+}
+
+#pages img.logo-1 { animation-delay: 0s; }
+#pages img.logo-2 { animation-delay: 0.2s; }
+#pages img.logo-3 { animation-delay: 0.4s; }
+#pages img.logo-4 { animation-delay: 0.6s; }
+#pages img.logo-5 { animation-delay: 0.8s; }
+.text-glow {
+    color: #fff;  /* Changed to yellow for the text color */
+    text-shadow: 0 0 2px #ffd700, 
+                 0 0 4px #ffd700, 
+                 0 0 6px #ffd700, 
+                 0 0 8px #ffd700, 
+                 0 0 10px #ffd700;
+}
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slideshow-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow-slide.active {
+    opacity: 1;
+}
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid #ffd700; /* The cursor */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffd700; }
+}
